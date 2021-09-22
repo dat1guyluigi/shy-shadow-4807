@@ -3,6 +3,6 @@
 <% @plots.each do |plot| %>
   <p><%= plot.number %></p>
   <% plot.plants.each do |plant| %>
-    <%= plant.name %>
+    <p><%= plant.name %> <%= link_to "Remove #{plant.name}", plant_path(plant), method: :delete %>
   <% end %>
 <% end %>
